@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="ko" className={`${roboto.variable} ${notoSansKr.variable}`}>
       <body className="font-sans">
         <Header />
-        {children}
+        <main className="mt-[12px] px-16">{children}</main>
       </body>
     </html>
   );
