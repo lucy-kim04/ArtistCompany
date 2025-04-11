@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '@/components/common/Button/logo';
 import GNBFollow from '@/components/common/Button/sns';
+import NavigationText from '@/components/common/Button/NavigationText';
+import HamburgerMenu from '@/components/common/Button/HamburgerMenu';
 
 export default function TestPage() {
   return (
@@ -15,6 +17,14 @@ export default function TestPage() {
           <div>
             <h2 className="text-lg mb-2">팔로우</h2>
             <GNBFollow />
+          </div>
+          <div>
+            <h2 className="text-lg mb-2">네비게이션</h2>
+            <NavigationText />
+          </div>
+          <div>
+            <h2 className="text-lg mb-2">햄버거 메뉴</h2>
+            <HamburgerMenu />
           </div>
         </div>
       </div>

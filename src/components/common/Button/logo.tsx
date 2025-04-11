@@ -8,10 +8,10 @@ export default function Logo() {
       <Image
         src="https://www.artistcompany.co.kr/wp-content/uploads/2017/02/Untitled-2.png"
         alt="Artist Company Logo"
-        width={200}
-        height={50}
+        width={84}
+        height={38}
         priority
-        className="object-contain"
+        className="object-contain ml-[12px]"
       />
     </Link>
   );

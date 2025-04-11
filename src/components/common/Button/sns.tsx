@@ -28,7 +28,7 @@ const SNS_LINKS = [
 
 export default function GNBFollow() {
   return (
-    <div className="gnb-fa flex gap-4 w-[106px] items-center justify-center">
+    <div className="gnb-fa flex gap-5 w-[106px] items-center justify-center">
       {SNS_LINKS.map((link, index) => (
         <Link
           key={index}
