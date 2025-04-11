@@ -18,7 +18,7 @@ export default function HamburgerMenu() {
   return (
     <>
       <div
-        className={`w-[46px] h-[46px] fixed top-5 left-5 z-50 cursor-pointer overflow-hidden ${
+        className={`w-[46px] h-[46px] cursor-pointer overflow-hidden ${
           isOpen ? 'opacity-0' : 'opacity-100'
         } transition-opacity`}
         onMouseEnter={() => !isOpen && setHovered(true)}
@@ -34,7 +34,7 @@ export default function HamburgerMenu() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
               transition={{ duration: 0.2 }}
-              className="absolute inset-0 flex flex-col justify-center items-center"
+              className="h-full flex flex-col justify-center items-center"
             >
               <span className="w-6 h-[2px] bg-black mb-2" />
               <span className="w-6 h-[2px] bg-black mb-2" />
@@ -52,7 +52,7 @@ export default function HamburgerMenu() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 10 }}
               transition={{ duration: 0.2 }}
-              className="absolute inset-0 flex justify-center items-center"
+              className="h-full flex justify-center items-center"
             >
               <span className="w-6 h-[2px] bg-black" />
             </motion.div>

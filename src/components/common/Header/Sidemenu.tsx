@@ -33,9 +33,9 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             exit={{ x: '-100%' }}
             transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
-            <div className="p-12 flex flex-col h-full">
+            <div className="p-8 flex flex-col h-full">
               {/* 메뉴 리스트 */}
-              <nav className="flex flex-col gap-8 mt-5">
+              <nav className="flex flex-col gap-3 mt-5">
                 {[
                   { name: 'Artist', href: '/artist' },
                   { name: 'Contents', href: '/contents' },
