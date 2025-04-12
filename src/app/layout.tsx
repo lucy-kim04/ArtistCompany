@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Roboto, Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Artist Company',
@@ -34,9 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={`${roboto.variable} ${notoSansKr.variable}`}>
-      <body className="font-sans">
+      <body>
         <Header />
         <main className="mt-[200px] px-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );
