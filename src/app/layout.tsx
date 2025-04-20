@@ -3,6 +3,9 @@ import { Roboto, Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer/Footer';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Artist Company',
