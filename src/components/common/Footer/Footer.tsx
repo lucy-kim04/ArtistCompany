@@ -81,7 +81,7 @@ export default function Footer() {
             all rights reserved. - Designed by heeju
           </p>
           <p className="w-1/3 text-right">
-            Total {visitorCount.total.toLocaleString()}
+            Visitor {visitorCount.total.toLocaleString()}
           </p>
         </div>
       </div>
