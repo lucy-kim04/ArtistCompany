@@ -61,9 +61,10 @@ const YoutubeNews = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
+    variableWith: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -84,17 +85,17 @@ const YoutubeNews = () => {
         {videos.map((video) => (
           <div key={video.id} className="px-2">
             <a
+              key={video.id}
               href={video.url}
               target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full"
+              className="w-[554.58px] h-[311.93px] flex-shrink-0"
             >
               <img
                 src={video.thumbnail}
                 alt={video.title}
-                className="rounded-xl w-full h-[280px] object-cover"
+                className="w-full h-full object-cover rounded-lg"
               />
-              <p className="mt-3 text-sm text-gray-700 text-center">
+              <p className="mt-2 text-sm text-gray-600 text-center">
                 {video.title}
               </p>
             </a>

@@ -11,7 +11,7 @@ interface ArtistCardProps {
 export default function ArtistCard({ name, imageUrl, href }: ArtistCardProps) {
   return (
     <Link href={href} className="block group">
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative aspect-square overflow-hidden mt-8">
         <Image
           src={imageUrl}
           alt={name}
