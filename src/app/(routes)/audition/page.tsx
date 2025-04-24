@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 export default function AuditionPage() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-10 text-gray-500 text-sm leading-relaxed space-y-12">
+    <main className="max-w-4xl mx-auto py-10 text-gray-500 text-sm leading-relaxed space-y-12">
       <h1 className="text-center text-[20px] text-[#222222] mb-20 tracking-[0.15em]">
         Audition
       </h1>
-      <div className="border-t border-gray-300 w-full max-w-3xl mx-auto my-6" />
+      <hr className="border-t border-gray-200 mb-8" />
 
       <div className="w-full flex justify-center">
         <Image
@@ -72,7 +72,7 @@ export default function AuditionPage() {
             <li>오디션 신청서 작성 및 필요한 자료 준비</li>
             <li>이메일로 신청서와 자료 접수</li>
           </ol>
-          <div className="mt-4 bg-gray-100 p-4 rounded space-y-1">
+          <div className="mt-4 bg-gray-50 p-4 rounded space-y-3">
             <p>
               <strong>이메일접수:</strong> audition@artistcompany.co.kr
             </p>

@@ -3,7 +3,7 @@ const CHANNEL_ID = 'UCLTZj7RzpoUCG_cqD0NVHbw';
 
 export const fetchLatestVideos = async () => {
   const res = await fetch(
-    `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&order=date&part=snippet&type=video&maxResults=5`
+    `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&order=date&part=snippet&type=video&maxResults=12`
   );
 
   const data = await res.json();
