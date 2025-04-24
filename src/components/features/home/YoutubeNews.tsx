@@ -17,7 +17,7 @@ const PrevArrow = (props: any) => {
   const { style, onClick } = props;
   return (
     <button
-      className="absolute left-[-30px] top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-1 cursor-pointer"
+      className="absolute left-[-40px] top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1 cursor-pointer"
       onClick={onClick}
       style={{ ...style }}
     >
@@ -31,7 +31,7 @@ const NextArrow = (props: any) => {
   const { style, onClick } = props;
   return (
     <button
-      className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-md p-1 cursor-pointer"
+      className="absolute right-[-40px] top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-1 cursor-pointer"
       onClick={onClick}
       style={{ ...style }}
     >
