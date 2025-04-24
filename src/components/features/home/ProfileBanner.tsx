@@ -40,7 +40,7 @@ export default function ProfileBanner() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // ✅ 5초 자동 슬라이드
+    autoplaySpeed: 4000, // ✅ 5초 자동 슬라이드
     pauseOnHover: false,
   };
 
@@ -77,7 +77,7 @@ export default function ProfileBanner() {
             </div>
 
             {/* 텍스트 오버레이 */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
+            <div className="absolute inset-0 flex flex-col items-start justify-center left-40 text-white px-4 sm:pl-24 pl-6 text-left">
               <h2 className="text-3xl sm:text-6xl font-bold mb-4">
                 {profile.name}
               </h2>
