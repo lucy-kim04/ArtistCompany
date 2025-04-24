@@ -69,13 +69,16 @@ export default function AllContentsGrid() {
 function NewsCard({ item }: { item: News }) {
   return (
     <div className="flex flex-col sm:flex-row gap-6 items-center">
-      <a href={item.url} target="_blank" className="block w-full sm:w-1/2">
-        <img
-          src={item.thumbnail}
-          alt={item.title}
-          className="w-full h-[240px] object-cover rounded-lg"
-        />
+      <a href={item.url} target="_blank" className="block w-[530px]">
+        <div className="relative w-full h-[300px] overflow-hidden rounded-lg bg-white flex items-center justify-center">
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            className="max-h-full max-w-full object-contain"
+          />
+        </div>
       </a>
+
       <div className="sm:w-1/2 space-y-2">
         <p className="text-[10px] text-gray-400">ARTISTCOMPANY —</p>
         <h3 className="text-base font-medium text-gray-800">{item.title}</h3>
@@ -88,13 +91,19 @@ function NewsCard({ item }: { item: News }) {
 function VideoCard({ item }: { item: Video }) {
   return (
     <div className="flex flex-col sm:flex-row gap-6 items-center">
-      <a href={item.url} target="_blank" className="block w-full sm:w-1/2">
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block relative w-full h-[300px] overflow-hidden rounded-lg bg-white flex items-center justify-center"
+      >
         <img
           src={item.thumbnail}
           alt={item.title}
-          className="w-full h-[240px] object-cover rounded-lg"
+          className="max-h-full max-w-full object-contain"
         />
       </a>
+
       <div className="sm:w-1/2 space-y-2">
         <p className="text-[10px] text-gray-400">ARTISTCOMPANY —</p>
         <h3 className="text-base font-medium text-gray-800">{item.title}</h3>

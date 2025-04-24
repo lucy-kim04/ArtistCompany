@@ -32,9 +32,9 @@ export default function VideoPage() {
   }, []);
 
   return (
-    <div className="px-40 py-4">
+    <div className="max-w-7xl mx-auto py-10">
       {/* 제목 + 구분선 */}
-      <div className="max-w-5xl mx-auto mb-12">
+      <div className="mb-12">
         <h1 className="text-center text-[20px] text-[#222222] mb-20 tracking-[0.15em]">
           Video
         </h1>

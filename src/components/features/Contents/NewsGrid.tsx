@@ -19,6 +19,7 @@ export default function NewsGrid() {
     supabase
       .from('news')
       .select('*')
+      .order('created_at', { ascending: false })
       .then(({ data, error }) => {
         console.log('📦 뉴스:', data);
         console.log('⚠️ 에러:', error);
@@ -39,12 +40,12 @@ export default function NewsGrid() {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full sm:w-1/2"
+            className="block w-full sm:w-1/2 h-[300px] bg-white flex items-center justify-center rounded-lg overflow-hidden"
           >
             <img
               src={item.thumbnail}
               alt={item.title}
-              className="w-full h-[240px] object-cover rounded-lg transition-transform duration-200 group-hover:scale-[1.02]"
+              className="max-h-full w-full object-contain"
             />
           </a>
 
