@@ -28,7 +28,7 @@ const films = [
 
 export default function FilmMainGrid() {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-16">
+    <main className="max-w-6xl mx-auto px-8 py-16">
       <h1 className="text-center text-[20px] text-[#222222] mb-20 tracking-[0.15em]">
         Film by Artist Studio
       </h1>

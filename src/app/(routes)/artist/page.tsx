@@ -117,7 +117,7 @@ const ARTISTS = [
 export default function ArtistPage() {
   return (
     <main>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-40 sm:px-6 lg:px-8">
         <h2 className="text-center text-[20px] text-[#222222] mb-[50px]">
           Artist
         </h2>

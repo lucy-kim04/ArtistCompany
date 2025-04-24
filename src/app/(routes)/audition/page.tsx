@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export default function AuditionPage() {
   return (
-    <main className="max-w-4xl mx-auto py-10 text-gray-500 text-sm leading-relaxed space-y-12">
+    <main className="max-w-4xl mx-auto py-10 px-4 text-gray-500 text-sm leading-relaxed space-y-12">
       <h1 className="text-center text-[20px] text-[#222222] mb-20 tracking-[0.15em]">
         Audition
       </h1>

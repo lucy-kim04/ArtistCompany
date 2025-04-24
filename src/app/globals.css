@@ -10,3 +10,6 @@
     font-family: var(--font-roboto), var(--font-noto-sans-kr), sans-serif;
   }
 }
+
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';

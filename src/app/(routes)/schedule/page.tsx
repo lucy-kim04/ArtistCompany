@@ -37,7 +37,7 @@ export default function SchedulePage() {
   };
 
   return (
-    <main className="pt-[120px]">
+    <main className="pt-[120px] px-40">
       <div className="max-w-7xl mx-auto">
         <div className="mx-4 sm:mx-8 lg:mx-12">
           <h2 className="text-center text-[20px] mb-[76px] tracking-[0.15em]">

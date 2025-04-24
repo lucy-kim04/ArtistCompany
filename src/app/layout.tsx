@@ -40,7 +40,7 @@ export default function RootLayout({
     <html lang="ko" className={`${roboto.variable} ${notoSansKr.variable}`}>
       <body>
         <Header />
-        <main className="mt-[200px] px-16">{children}</main>
+        <main className="mt-[200px]">{children}</main>
         <Footer />
       </body>
     </html>
