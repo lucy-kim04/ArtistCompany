@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎬 Artist Company Clone
+# 🎬 Artist Company Re-design
 
 <img 
   src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo-crop.png"  />
@@ -23,7 +23,6 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
-gi
 
 # ▶️ Local server: http://localhost:3000
 
