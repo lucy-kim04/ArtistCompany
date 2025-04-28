@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { supabase } from '@/utils/supabase/client'; // ✅ 중괄호 맞게!
+import { supabase } from '@/utils/supabase/client';
 import Calendar from 'react-calendar';
 import dayjs from 'dayjs';
-import './calendar.css'; // 아래에 같이 줄게
+import './calendar.css';
 
 type Schedule = {
   id: string;
@@ -15,11 +15,6 @@ type Schedule = {
 export default function SchedulePage() {
   const [value, setValue] = useState<Date | null>(new Date());
 
-  const handleChange = (val: Date | Date[] | null) => {
-    if (!val || Array.isArray(val)) return;
-    setValue(val);
-  };
-
   const [schedules, setSchedules] = useState<Schedule[]>([]);
 
   useEffect(() => {
@@ -29,12 +24,6 @@ export default function SchedulePage() {
     };
     fetchData();
   }, []);
-
-  const tileContent = ({ date }: { date: Date }) => {
-    const formatted = dayjs(date).format('YYYY-MM-DD');
-    const hasSchedule = schedules.some((s) => s.date === formatted);
-    return hasSchedule ? <div className="dot" /> : null;
-  };
 
   return (
     <main className="pt-[120px] px-40">
