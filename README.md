@@ -3,7 +3,7 @@
 # 🎬 Artist Company Clone
 
 <img src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo.png"
- width="600"/>
+ width="600" height="200"/>
 
 ## 🔧 Tech Stack
 
@@ -26,33 +26,33 @@
 
 ## 📁 Folder Structure
 
-```
+```plaintext
+📁 src/
 ├── 🏠 app/
- │ ├── 🗂️ (routes)/
- │ ├── 📄 page.tsx
- │ ├── 📐 layout.tsx
- │ └── 🎨 globals.css
- ├── 🧩 components/
- │ ├── 🧱 common/
- │ │ ├── 🔘 Button/
- │ │ ├── ⌨️ Input/
- │ │ └── 🔤 Typography/
- │ └── 🎯 features/
- │ ├── 👤 artists/
- │ └── 🏡 home/
- ├── 📌 constants/
- ├── 🪝 hooks/
- │ ├── 🧱 common/
- │ └── 🎯 features/
- ├── 🚀 services/
- │ ├── 📡 api/
- │ └── 📄 types/
- ├── 🎨 styles/
- │ └── 🖍️ theme/
- └── 🧰 utils/
- ├── 🧹 format/
- └── 🛠️ helpers/
- 🚀 Getting Started
+│   ├── 🗂️ (routes)/
+│   ├── 📄 page.tsx
+│   ├── 📐 layout.tsx
+│   └── 🎨 globals.css
+├── 🧩 components/
+│   ├── 🧱 common/
+│   │   ├── 🔘 Button/
+│   │   ├── ⌨️ Input/
+│   │   └── 🔤 Typography/
+│   └── 🎯 features/
+│       ├── 👤 artists/
+│       └── 🏡 home/
+├── 📌 constants/
+├── 🪝 hooks/
+│   ├── 🧱 common/
+│   └── 🎯 features/
+├── 🚀 services/
+│   ├── 📡 api/
+│   └── 📄 types/
+├── 🎨 styles/
+│   └── 🖍️ theme/
+└── 🧰 utils/
+    ├── 🧹 format/
+    └── 🛠️ helpers/
 ```
 
 # ▶️ Local server: http://localhost:3000
