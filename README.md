@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🎬 Artist Company Clone
 
 <img src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo.png"
@@ -51,19 +53,21 @@
  ├── 🧹 format/
  └── 🛠️ helpers/
  🚀 Getting Started
- bash
- 복사
- 편집
-npm install
-npm run dev
+```
 
 # ▶️ Local server: http://localhost:3000
 
-🌐 Deployment
+### 🌐 Deployment
+
 Deploy: 준비 중...
 
-📝 Notes
+### 📝 Notes
+
 이 프로젝트는 연습용 클론 프로젝트입니다.
 
 디자인과 UI 구성은 창작 또는 오마주 기반입니다.
+
+```
+
+</div>
 ```
