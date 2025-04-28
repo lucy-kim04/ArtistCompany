@@ -95,7 +95,7 @@ function VideoCard({ item }: { item: Video }) {
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block relative w-full h-[300px] overflow-hidden rounded-lg bg-white flex items-center justify-center"
+        className="relative w-full h-[300px] overflow-hidden rounded-lg bg-white flex items-center justify-center"
       >
         <img
           src={item.thumbnail}

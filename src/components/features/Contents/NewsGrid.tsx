@@ -40,7 +40,7 @@ export default function NewsGrid() {
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full sm:w-1/2 h-[300px] bg-white flex items-center justify-center rounded-lg overflow-hidden"
+            className="w-full sm:w-1/2 h-[300px] bg-white flex items-center justify-center rounded-lg overflow-hidden"
           >
             <img
               src={item.thumbnail}

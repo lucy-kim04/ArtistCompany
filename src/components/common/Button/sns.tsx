@@ -35,7 +35,7 @@ export default function GNBFollow() {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`block relative flex items-center ${
+          className={`relative flex items-center ${
             index === 0 ? 'w-[16px] h-[10px]' : 'w-[15px] h-[15px]'
           }`}
         >
