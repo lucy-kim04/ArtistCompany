@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎬 Artist Company Clone
+# 🎬 Artist Company Re-design
 
 <img 
   src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo-crop.png"  />
