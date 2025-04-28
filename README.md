@@ -1,5 +1,7 @@
-🎬 Artist Company Clone
-<img src="/mnt/data/bfa7510c-b556-437e-8cd9-2a44e1523d96.png" width="600"/>
+# 🎬 Artist Company Clone
+
+<img src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo.png"
+ width="600"/>
 
 ## 🔧 Tech Stack
 
