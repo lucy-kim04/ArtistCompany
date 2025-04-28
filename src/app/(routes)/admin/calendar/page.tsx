@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import CalendarForm from './CalendarForm';
+import AdminSidebar from '@/components/common/Admin/AdminSidebar';
 
 export default async function CalendarAdminPage() {
   const cookieStore = await cookies();
@@ -12,6 +13,7 @@ export default async function CalendarAdminPage() {
 
   return (
     <div className="max-w-xl mx-auto p-8 space-y-4">
+      <AdminSidebar />
       <CalendarForm />
     </div>
   );
