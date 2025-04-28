@@ -42,9 +42,23 @@ export default function SchedulePage() {
                   setValue(val as Date);
                 }}
                 value={value}
-                tileContent={({ date }) => (
-                  <div className="custom-day-number">{date.getDate()}</div>
-                )}
+                tileContent={({ date }) => {
+                  const daySchedules = schedules.filter((schedule) => {
+                    const scheduleDate = new Date(schedule.date);
+                    return scheduleDate.toDateString() === date.toDateString();
+                  });
+
+                  return (
+                    <div className="flex flex-col items-center">
+                      <div className="custom-day-number">{date.getDate()}</div>
+                      {daySchedules.length > 0 && (
+                        <div className="text-[8px] text-red-500 text-center mt-1">
+                          {daySchedules[0].title}
+                        </div>
+                      )}
+                    </div>
+                  );
+                }}
                 calendarType="gregory"
                 prev2Label={null}
                 next2Label={null}
