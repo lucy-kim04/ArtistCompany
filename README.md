@@ -2,12 +2,26 @@
 <img src="/mnt/data/bfa7510c-b556-437e-8cd9-2a44e1523d96.png" width="600"/>
 🔧 Tech Stack
 
-Framework Language Styling State Fetching Deploy
-React Context
+## 🔧 Tech Stack
+
+### FrontEnd
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React Query](https://img.shields.io/badge/React_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
+
+### Deploy & Infra
+
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+### Tools
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Github](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)
+
 🗂️ Folder Structure
-css
-복사
-편집
 📁 src/
 ├── 🏠 app/
 │ ├── 🗂️ (routes)/
