@@ -2,8 +2,11 @@
 
 # 🎬 Artist Company Clone
 
-<img src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo.png"
- width="600" height="200"/>
+<img 
+  src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo.png" 
+  width="600" 
+  height="200"
+  style="object-fit: cover; object-position: center;"/>
 
 ## 🔧 Tech Stack
 
