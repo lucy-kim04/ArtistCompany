@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 const NAVIGATION_ITEMS = [
+  { name: 'About Us', href: '/aboutus' },
   { name: 'Artist', href: '/artist' },
   { name: 'Contents', href: '/contents' },
   { name: 'Film', href: '/film' },
