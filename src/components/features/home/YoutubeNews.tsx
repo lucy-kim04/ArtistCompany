@@ -12,7 +12,7 @@ type Video = {
   published_at: string;
 };
 
-// 🔼 왼쪽 화살표
+// ⬅️ 왼쪽 화살표
 const PrevArrow = (props: any) => {
   const { style, onClick } = props;
   return (
@@ -26,7 +26,7 @@ const PrevArrow = (props: any) => {
   );
 };
 
-// 🔼 오른쪽 화살표
+// ➡️ 오른쪽 화살표
 const NextArrow = (props: any) => {
   const { style, onClick } = props;
   return (

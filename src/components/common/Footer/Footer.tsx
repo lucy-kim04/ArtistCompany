@@ -14,7 +14,6 @@ export default function Footer() {
   useEffect(() => {
     const fetchVisitorCount = async () => {
       try {
-        // 방문자 수 +1
         const updateResponse = await fetch('/api/visitor', {
           method: 'POST',
           headers: {

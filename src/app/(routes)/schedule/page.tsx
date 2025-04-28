@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/utils/supabase/client';
 import Calendar from 'react-calendar';
-import dayjs from 'dayjs';
+
 import './calendar.css';
 
 type Schedule = {
@@ -34,7 +34,6 @@ export default function SchedulePage() {
           </h2>
           <hr className="border-t border-gray-200 mb-8" />
 
-          {/* 캘린더 가운데 정렬 wrapper */}
           <div className="flex justify-center">
             <div className="w-full max-w-[1050px]">
               <Calendar

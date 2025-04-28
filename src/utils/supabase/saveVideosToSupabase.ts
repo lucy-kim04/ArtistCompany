@@ -1,6 +1,4 @@
-// saveVideosToSupabase.ts
-import supabase from './server'; // ✅ 요거만 수정
-
+import supabase from './server';
 export const saveVideosToSupabase = async (videos: any[]) => {
   for (const video of videos) {
     const { error } = await supabase

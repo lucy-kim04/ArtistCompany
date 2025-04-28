@@ -184,7 +184,7 @@ export default function ProfileBanner() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // ✅ 5초 자동 슬라이드
+    autoplaySpeed: 5000,
     pauseOnHover: false,
   };
   return (
@@ -196,7 +196,6 @@ export default function ProfileBanner() {
               key={index}
               className="relative w-full h-[calc(100vw*9/16)] sm:h-[calc(100vw*3/8)] lg:w-[1720px] lg:h-[618px] mx-auto"
             >
-              {/* PC 이미지 */}
               <div className="absolute inset-0 -z-10 hidden sm:block">
                 <Image
                   src={profile.imagePC}
@@ -207,7 +206,7 @@ export default function ProfileBanner() {
                 />
                 <div className="absolute inset-0 bg-black/30" />
               </div>
-              {/* 모바일 이미지 */}
+
               <div className="absolute inset-0 -z-10 block md:hidden h-[560px]">
                 <Image
                   src={profile.imageMO}
@@ -218,7 +217,7 @@ export default function ProfileBanner() {
                 />
                 <div className="absolute inset-0 bg-black/30" />
               </div>
-              {/* 텍스트 오버레이 */}
+
               <div className="absolute inset-0 flex flex-col items-start justify-center text-white px-4 sm:pl-24 pl-6">
                 <h2 className="text-3xl sm:text-6xl font-bold mb-4">
                   {profile.name}

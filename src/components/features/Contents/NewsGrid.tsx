@@ -23,7 +23,7 @@ export default function NewsGrid() {
       .then(({ data, error }) => {
         console.log('📦 뉴스:', data);
         console.log('⚠️ 에러:', error);
-        if (data) setNews(data); // ✅ 요거 넣어야 함
+        if (data) setNews(data);
       });
   }, []);
 

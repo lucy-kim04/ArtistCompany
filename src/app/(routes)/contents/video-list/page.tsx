@@ -33,7 +33,6 @@ export default function VideoPage() {
 
   return (
     <div className="max-w-7xl mx-auto py-10">
-      {/* 제목 + 구분선 */}
       <div className="mb-12">
         <h1 className="text-center text-[20px] text-[#222222] mb-20 tracking-[0.15em]">
           Video
@@ -41,7 +40,6 @@ export default function VideoPage() {
         <div className="h-px bg-gray-200" />
       </div>
 
-      {/* 사이드 메뉴 + 콘텐츠 */}
       <ContentsLayout>
         <section className="grid grid-cols-1 gap-10">
           {videos.map((video, index) => (

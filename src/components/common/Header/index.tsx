@@ -7,7 +7,6 @@ import HamburgerMenu from '@/components/common/Button/HamburgerMenu';
 export default function Header() {
   return (
     <>
-      {/* 데스크톱 헤더 */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm hidden sm:block pt-[60px]">
         <div className="max-w-7xl mx-auto">
           <div className="mx-4 sm:mx-8 lg:mx-12">
@@ -20,7 +19,6 @@ export default function Header() {
         </div>
       </header>
 
-      {/* 모바일 헤더 */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm sm:hidden pt-[60px]">
         <div className="max-w-7xl mx-auto">
           <div className="mx-4">

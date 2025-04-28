@@ -25,7 +25,7 @@ export default function HamburgerMenu() {
         onMouseLeave={() => !isOpen && setHovered(false)}
         onClick={() => setIsOpen(true)}
       >
-        {/* 햄버거 3줄 (기본 상태) */}
+       
         <AnimatePresence>
           {!hovered && !isOpen && (
             <motion.div
@@ -43,7 +43,7 @@ export default function HamburgerMenu() {
           )}
         </AnimatePresence>
 
-        {/* 1줄 (hover or open 상태) */}
+      
         <AnimatePresence>
           {(hovered || isOpen) && (
             <motion.div
@@ -60,7 +60,7 @@ export default function HamburgerMenu() {
         </AnimatePresence>
       </div>
 
-      {/* 사이드 메뉴 */}
+
       <SideMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </>
   );

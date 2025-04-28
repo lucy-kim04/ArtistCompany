@@ -7,7 +7,6 @@ export const fetchLatestVideos = async () => {
   );
 
   const data = await res.json();
-  console.log('📺 유튜브 응답:', data); // 이거 추가
 
   if (!data.items) {
     throw new Error(`YouTube API 응답에 items가 없음: ${JSON.stringify(data)}`);

@@ -15,7 +15,6 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* ✅ 부드럽게 어두워지는 오버레이 */}
           <motion.div
             className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[100]"
             initial={{ opacity: 0 }}
@@ -25,7 +24,6 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             onClick={onClose}
           />
 
-          {/* ✅ 왼쪽에서 슥 등장하는 사이드 메뉴 */}
           <motion.div
             className="fixed top-0 left-0 w-[300px] h-full bg-white z-[999]"
             initial={{ x: '-100%' }}
@@ -34,7 +32,6 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
             transition={{ duration: 0.4, ease: 'easeInOut' }}
           >
             <div className="p-8 flex flex-col h-full">
-              {/* 메뉴 리스트 */}
               <nav className="flex flex-col gap-3 mt-5">
                 {[
                   { name: 'Artist', href: '/artist' },
@@ -54,7 +51,6 @@ export default function SideMenu({ isOpen, onClose }: SideMenuProps) {
                 ))}
               </nav>
 
-              {/* SNS 링크 */}
               <div className="mt-20">
                 <div className="border-t border-[#e5e5e5] pt-4 mb-4">
                   <p className="text-xs tracking-[0.2em] text-[#999999] mb-6">

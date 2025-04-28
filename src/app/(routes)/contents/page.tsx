@@ -56,14 +56,12 @@ export default function AllContentsGrid() {
   return (
     <div className="max-w-7xl mx-auto py-10">
       <div className="mb-12">
-        {/* 제목 + 구분선 */}
-
         <h1 className="text-center text-[20px] text-[#222222] mb-20 tracking-[0.15em]">
           Contents
         </h1>
         <div className="h-px bg-gray-200" />
       </div>
-      {/* 사이드 메뉴 + 콘텐츠 */}
+
       <ContentsLayout>
         <section className="grid grid-cols-1 gap-10">
           {items.map((item, index) =>
@@ -92,7 +90,7 @@ function NewsCard({ item, index }: { item: News; index: number }) {
             src={item.thumbnail}
             alt={item.title}
             className="absolute top-1/2 left-1/2 h-full w-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{ maxWidth: 'none' }} // 핵심: 가로는 제한 없이 잘리도록 허용
+            style={{ maxWidth: 'none' }}
           />
         </div>
       </a>
@@ -119,7 +117,7 @@ function VideoCard({ item, index }: { item: Video; index: number }) {
             src={item.thumbnail}
             alt={item.title}
             className="absolute top-1/2 left-1/2 h-full w-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{ maxWidth: 'none' }} // 핵심: 가로는 제한 없이 잘리도록 허용
+            style={{ maxWidth: 'none' }}
           />
         </div>
       </a>
