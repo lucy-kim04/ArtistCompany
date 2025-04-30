@@ -35,7 +35,9 @@ Deploy: 준비 중...
 
 이 프로젝트는 연습용 클론 프로젝트입니다.
 
-디자인과 UI 구성은 창작 또는 오마주 기반입니다.
+디자인과 UI 구성은 기존 페이지 기반입니다.
+
+기존 페이지 : https://www.artistcompany.co.kr/
 
 프로젝트 세부 설명 : [![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://amplified-pot-cae.notion.site/ArtistCompany-1dd75c00010a800a9663eaefbaf45db8)
 
