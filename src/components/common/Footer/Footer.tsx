@@ -77,7 +77,10 @@ export default function Footer() {
           <p className="w-1/3 text-center">
             copyright © 2017 Artist Company Inc.
             <br />
-            all rights reserved. - Designed by heeju
+            all rights reserved. - Designed by{' '}
+            <a href="https://github.com/lucy-kim04" target="_blank">
+              heeju
+            </a>
           </p>
           <p className="w-1/3 text-right">
             Visitor {visitorCount.total.toLocaleString()}
