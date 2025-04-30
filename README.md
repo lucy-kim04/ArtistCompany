@@ -36,22 +36,74 @@
 
 ---
 
-# ▶️ Local server: http://localhost:3000
+---
+
+## 🧭 프로젝트 개요
+
+- **프로젝트명**: Artist Company Re-design
+- **프로젝트 소개**: 기존 Artist Company 웹사이트를 리디자인하여 사용자 경험을 향상시키는 프로젝트입니다.
+- **개발 기간**: 2025년 4월 1일 ~ 2025년 4월 30일
+- **참여 인원**: 1명 (개인 프로젝트)
 
 ---
 
-### 🌐 Deployment
+## 🛠️ 시작 가이드
 
-Deploy: 준비 중...
+### ✅ 요구 사항
+
+- Node.js (v16 이상)
+- npm 또는 yarn
+
+### 🚀 설치 및 실행
+
+```bash
+# 레포지토리 클론
+git clone https://github.com/your-username/artist-company-redesign.git
+
+# 디렉토리 이동
+cd artist-company-redesign
+
+# 패키지 설치
+npm install
+
+# 개발 서버 실행
+npm run dev
+```
 
 ---
 
-### 📝 Notes
+## 🌟 주요 기능
 
-이 프로젝트는 연습용 클론 프로젝트입니다.  
-디자인과 UI 구성은 기존 페이지 기반입니다.
+- 🎨 **홈페이지 리디자인** – 기존 사이트를 현대적인 UI/UX로 개선  
+- 🧑‍🎤 **배우 소개 페이지** – 프로필, 생일, 데뷔작, 이미지 제공  
+- 📰 **뉴스 섹션** – 외부 뉴스 링크의 메타데이터 카드 구성  
+- 📺 **유튜브 콘텐츠** – Supabase에 저장된 유튜브 영상을 썸네일 카드로 제공  
+- 📱 **반응형 지원** – PC/Mobile에 따라 슬라이드 및 카드 최적화
 
-🔗 기존 페이지: [https://www.artistcompany.co.kr/](https://www.artistcompany.co.kr/)  
-📄 프로젝트 세부 설명:  [![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://amplified-pot-cae.notion.site/ArtistCompany-1dd75c00010a800a9663eaefbaf45db8)
+---
+
+## 👩‍💻 개발자 정보
+
+- **이름**: 김희주 (Lucy Kim)
+- **GitHub**: [lucy-kim04](https://github.com/lucy-kim04)
+- **이메일**: effelt0905@gmail.com
+- **Notion**: [프로젝트 노션 페이지](https://amplified-pot-cae.notion.site/ArtistCompany-1dd75c00010a800a9663eaefbaf45db8)
+
+---
+
+## 📄 문서 및 참고 자료
+
+- 🔗 [Artist Company 공식 사이트](https://www.artistcompany.co.kr/)
+- 🗂️ [프로젝트 기획 및 기록 (Notion)](https://amplified-pot-cae.notion.site/ArtistCompany-1dd75c00010a800a9663eaefbaf45db8)
+
+---
+
+## 📝 회고 및 느낀 점
+
+뭘 느껴야하지 supabase 연동에서 헤매면서 BE 공부의 필요성을 느꼈다?
+
+---
+
+
 
 </div>
