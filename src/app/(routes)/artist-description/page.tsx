@@ -7,7 +7,7 @@ const ARTISTS = [
     engName: 'Ahn Sung ki',
     imageUrl: '/images/ArtistCard/ahn_sung_ki_card.png',
     href: '/artist/ahn-sung-ki',
-    filmography: '영화 [실미도] /n 영화 [라디오스타]',
+    filmography: '영화 [실미도] \n 영화 [라디오스타]',
   },
   {
     name: 'Lee Jung Jae',

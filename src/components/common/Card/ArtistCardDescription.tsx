@@ -38,7 +38,11 @@ export default function ArtistCardDescription({
         <div>
           <h3 className="text-lg font-semibold">{name}</h3>
           <p className="text-sm opacity-80 mb-2">{engName}</p>
-          {filmography && <p className="text-xs leading-snug">{filmography}</p>}
+          {filmography && (
+            <p className="text-sm text-gray-300 whitespace-pre-line">
+              {filmography}
+            </p>
+          )}
         </div>
       </div>
 
