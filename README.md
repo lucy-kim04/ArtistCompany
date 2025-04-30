@@ -37,4 +37,6 @@ Deploy: 준비 중...
 
 디자인과 UI 구성은 창작 또는 오마주 기반입니다.
 
+프로젝트 세부 설명 : [![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://amplified-pot-cae.notion.site/ArtistCompany-1dd75c00010a800a9663eaefbaf45db8)
+
 </div>
