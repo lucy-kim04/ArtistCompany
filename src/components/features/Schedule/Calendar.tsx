@@ -5,6 +5,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './calendar.css';
 import ScheduleModal from './ScheduleModal';
+import DayScheduleModal from './DayScheduleModal';
 
 const weekdays = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
@@ -27,6 +28,8 @@ const ScheduleCalendar = () => {
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedArtist, setSelectedArtist] = useState<string | null>(null);
+  const [isDayModalOpen, setIsDayModalOpen] = useState(false);
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   useEffect(() => {
     const fetchSchedules = async () => {
@@ -50,9 +53,29 @@ const ScheduleCalendar = () => {
     return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
   };
 
+  const formatDateToString = (date: Date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  };
+
   const handleScheduleClick = (schedule: Schedule) => {
     setSelectedSchedule(schedule);
     setIsModalOpen(true);
+    setIsDayModalOpen(false);
+  };
+
+  const handleDateClick = (date: Date) => {
+    const dateStr = formatDateToString(date);
+    const daySchedules = filteredSchedules.filter(
+      (schedule) => schedule.date === dateStr
+    );
+
+    if (daySchedules.length > 0) {
+      setSelectedDate(date);
+      setIsDayModalOpen(true);
+    }
   };
 
   // 아티스트 목록 가져오기
@@ -66,10 +89,7 @@ const ScheduleCalendar = () => {
     : schedules;
 
   const tileContent = ({ date }: { date: Date }) => {
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    const dateStr = `${date.getFullYear()}-${month}-${day}`;
-
+    const dateStr = formatDateToString(date);
     const daySchedules = filteredSchedules.filter(
       (schedule) => schedule.date === dateStr
     );
@@ -82,20 +102,33 @@ const ScheduleCalendar = () => {
           marginTop: '40px',
           textAlign: 'left',
           paddingLeft: '8px',
-          lineHeight: '1.4',
+          lineHeight: '1.6',
         }}
       >
         {daySchedules.map((schedule) => (
           <div
             key={schedule.id}
-            onClick={() => handleScheduleClick(schedule)}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleScheduleClick(schedule);
+            }}
             style={{
               color: '#666',
               fontSize: '0.85em',
-              marginBottom: '3px',
+              marginBottom: '5px',
               cursor: 'pointer',
               textAlign: 'left',
               width: '100%',
+              backgroundColor: '#f5f5f5',
+              padding: '4px 6px',
+              borderRadius: '4px',
+              transition: 'all 0.2s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#eeeeee';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#f5f5f5';
             }}
           >
             [{schedule.Artist}] {schedule.title}
@@ -143,12 +176,24 @@ const ScheduleCalendar = () => {
           formatMonthYear={formatMonthYear}
           tileContent={tileContent}
           className="calendar-custom"
+          onClickDay={handleDateClick}
         />
         <ScheduleModal
           schedule={selectedSchedule}
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
         />
+        {selectedDate && (
+          <DayScheduleModal
+            schedules={filteredSchedules.filter(
+              (schedule) => schedule.date === formatDateToString(selectedDate)
+            )}
+            date={selectedDate}
+            isOpen={isDayModalOpen}
+            onClose={() => setIsDayModalOpen(false)}
+            onScheduleClick={handleScheduleClick}
+          />
+        )}
       </div>
     </div>
   );
