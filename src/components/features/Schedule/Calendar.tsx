@@ -59,7 +59,7 @@ const ScheduleCalendar = () => {
           <div
             key={schedule.id}
             style={{
-              color: '#E91E63',
+              color: '#666',
               fontSize: '0.85em',
               marginBottom: '4px',
             }}
