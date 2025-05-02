@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { supabase } from '@/utils/supabase/client';
+import { supabase } from '@/utils/client';
 import Calendar from 'react-calendar';
 
 import './calendar.css';

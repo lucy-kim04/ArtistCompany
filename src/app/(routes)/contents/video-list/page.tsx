@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { supabase } from '@/utils/supabase/client';
+import { supabase } from '@/utils/client';
 import ContentsLayout from '@/styles/ContentsLayout';
 type Video = {
   id: string;
