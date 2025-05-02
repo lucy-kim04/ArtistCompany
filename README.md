@@ -57,21 +57,23 @@
 Node.js (v16 이상)
 npm 또는 yarn
 
+
 ## 🚀 설치 및 실행
 
 ```bash
-# 레포지토리 클론
+# 1. 레포지토리 클론
 git clone https://github.com/lucy-kim04/ArtistCompany.git
 
-# 디렉토리 이동
+# 2. 디렉토리 이동
 cd ArtistCompany
 
-# 패키지 설치
+# 3. 패키지 설치
 npm install
 
-# 개발 서버 실행
+# 4. 개발 서버 실행
 npm run dev
 ```
+
 
 
 
