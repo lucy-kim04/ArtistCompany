@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY! // 서버 전용 키
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
 
 export async function POST(req: Request) {
@@ -34,7 +34,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: true });
   }
 
-  // 타입 매칭 안될 때
   return NextResponse.json(
     { error: '지원하지 않는 type입니다.' },
     { status: 400 }

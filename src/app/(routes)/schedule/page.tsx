@@ -1,30 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { supabase } from '@/utils/client';
-import Calendar from 'react-calendar';
-
-import './calendar.css';
-
-type Schedule = {
-  id: string;
-  title: string;
-  date: string;
-};
+import ScheduleCalendar from '@/components/features/Schedule/Calendar';
 
 export default function SchedulePage() {
-  const [value, setValue] = useState<Date | null>(new Date());
-
-  const [schedules, setSchedules] = useState<Schedule[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data } = await supabase.from('schedule').select('*');
-      if (data) setSchedules(data);
-    };
-    fetchData();
-  }, []);
-
   return (
     <main className="pt-[120px] px-40">
       <div className="max-w-7xl mx-auto">
@@ -34,40 +12,9 @@ export default function SchedulePage() {
           </h2>
           <hr className="border-t border-gray-200 mb-8" />
 
-          <div className="flex justify-center">
+          <div>
             <div className="w-full max-w-[1050px]">
-              <Calendar
-                onChange={(val) => {
-                  if (!val || Array.isArray(val)) return;
-                  setValue(val as Date);
-                }}
-                value={value}
-                tileContent={({ date }) => {
-                  const daySchedules = schedules.filter((schedule) => {
-                    const scheduleDate = new Date(schedule.date);
-                    return scheduleDate.toDateString() === date.toDateString();
-                  });
-
-                  return (
-                    <div className="flex flex-col items-center">
-                      <div className="custom-day-number">{date.getDate()}</div>
-                      {daySchedules.length > 0 && (
-                        <div className="text-[8px] text-red-500 text-center mt-1">
-                          {daySchedules[0].title}
-                        </div>
-                      )}
-                    </div>
-                  );
-                }}
-                calendarType="gregory"
-                prev2Label={null}
-                next2Label={null}
-                formatShortWeekday={(locale, date) =>
-                  ['S', 'M', 'T', 'W', 'T', 'F', 'S'][date.getDay()]
-                }
-                formatDay={(_, date) => String(date.getDate())}
-                className="react-calendar"
-              />
+              <ScheduleCalendar />
             </div>
           </div>
         </div>
