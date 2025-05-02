@@ -77,7 +77,14 @@ const ScheduleCalendar = () => {
     if (daySchedules.length === 0) return null;
 
     return (
-      <div style={{ marginTop: '40px' }}>
+      <div
+        style={{
+          marginTop: '40px',
+          textAlign: 'left',
+          paddingLeft: '8px',
+          lineHeight: '1.4',
+        }}
+      >
         {daySchedules.map((schedule) => (
           <div
             key={schedule.id}
@@ -85,11 +92,13 @@ const ScheduleCalendar = () => {
             style={{
               color: '#666',
               fontSize: '0.85em',
-              marginBottom: '4px',
+              marginBottom: '3px',
               cursor: 'pointer',
+              textAlign: 'left',
+              width: '100%',
             }}
           >
-            {schedule.title}
+            [{schedule.Artist}] {schedule.title}
           </div>
         ))}
       </div>
@@ -124,7 +133,7 @@ const ScheduleCalendar = () => {
           ))}
         </select>
       </div>
-      <div className="flex justify-center">
+      <div>
         <Calendar
           onChange={(value) => setDate(value as CalendarValue)}
           value={date}
