@@ -59,12 +59,16 @@ npm 또는 yarn
 
 ### 🚀 설치 및 실행
 
+
+
+<div align="center">
+
 ```bash
 # 레포지토리 클론
-git clone https://github.com/your-username/artist-company-redesign.git
+git clone https://github.com/lucy-kim04/ArtistCompany.git
 
 # 디렉토리 이동
-cd artist-company-redesign
+cd ArtistCompany
 
 # 패키지 설치
 npm install
@@ -72,6 +76,9 @@ npm install
 # 개발 서버 실행
 npm run dev
 ```
+
+</div>
+
 
 ---
 
