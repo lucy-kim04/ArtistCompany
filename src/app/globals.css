@@ -13,3 +13,11 @@
 
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
+
+select option:checked,
+select option:hover,
+select option:focus {
+  background: linear-gradient(#fdf2f8, #fdf2f8);
+  background-color: #fdf2f8 !important; /* pink-50 */
+  color: inherit !important;
+}
