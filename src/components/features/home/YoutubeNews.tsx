@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Slider from 'react-slick';
+import Slider, { Settings } from 'react-slick';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 type Video = {
@@ -12,33 +12,33 @@ type Video = {
   published_at: string;
 };
 
-// ⬅️ 왼쪽 화살표
-const PrevArrow = (props: any) => {
-  const { style, onClick } = props;
-  return (
-    <button
-      className="absolute left-[-40px] top-[170px] transform -translate-y-1/2 z-10 bg-white rounded-full p-1 cursor-pointer"
-      onClick={onClick}
-      style={{ ...style }}
-    >
-      <ArrowLeft className="w-6 h-6 text-gray-700" />
-    </button>
-  );
+// 슬라이더 커스텀 화살표 props 타입
+type ArrowProps = {
+  style?: React.CSSProperties;
+  onClick?: () => void;
 };
 
+// ⬅️ 왼쪽 화살표
+const PrevArrow = ({ style, onClick }: ArrowProps) => (
+  <button
+    className="absolute left-[-40px] top-[170px] transform -translate-y-1/2 z-10 bg-white rounded-full p-1 cursor-pointer"
+    onClick={onClick}
+    style={{ ...style }}
+  >
+    <ArrowLeft className="w-6 h-6 text-gray-700" />
+  </button>
+);
+
 // ➡️ 오른쪽 화살표
-const NextArrow = (props: any) => {
-  const { style, onClick } = props;
-  return (
-    <button
-      className="absolute right-[-40px] top-[170px] transform -translate-y-1/2 z-10 bg-white rounded-full p-1 cursor-pointer"
-      onClick={onClick}
-      style={{ ...style }}
-    >
-      <ArrowRight className="w-6 h-6 text-gray-700" />
-    </button>
-  );
-};
+const NextArrow = ({ style, onClick }: ArrowProps) => (
+  <button
+    className="absolute right-[-40px] top-[170px] transform -translate-y-1/2 z-10 bg-white rounded-full p-1 cursor-pointer"
+    onClick={onClick}
+    style={{ ...style }}
+  >
+    <ArrowRight className="w-6 h-6 text-gray-700" />
+  </button>
+);
 
 const YoutubeNews = () => {
   const [videos, setVideos] = useState<Video[]>([]);
@@ -48,7 +48,7 @@ const YoutubeNews = () => {
       try {
         const res = await fetch('/api/videos');
         if (!res.ok) throw new Error('Fetch 실패');
-        const data = await res.json();
+        const data: Video[] = await res.json(); // ✅ 타입 지정
         setVideos(data);
       } catch (err) {
         console.error('🔥 유튜브 영상 불러오기 실패:', err);
@@ -57,14 +57,14 @@ const YoutubeNews = () => {
     fetchVideos();
   }, []);
 
-  const settings = {
+  const settings: Settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
-    variableWith: true,
+    variableWidth: true, // 오타 수정: `variableWith` ❌ → `variableWidth` ✅
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -85,9 +85,9 @@ const YoutubeNews = () => {
         {videos.map((video) => (
           <div key={video.id} className="px-2">
             <a
-              key={video.id}
               href={video.url}
               target="_blank"
+              rel="noopener noreferrer"
               className="w-[554.58px] h-[311.93px] flex-shrink-0"
             >
               <img
