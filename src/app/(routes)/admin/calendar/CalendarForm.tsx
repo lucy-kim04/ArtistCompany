@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 type ArtistType =
   | '안성기'
@@ -64,7 +64,6 @@ export default function CalendarForm() {
     { id: '최경호', name: '최경호' },
     { id: '유정후', name: '유정후' },
   ]);
-  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
