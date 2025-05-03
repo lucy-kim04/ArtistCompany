@@ -128,7 +128,7 @@ export default function ArtistDescriptionPage() {
             <ArtistCardDescription
               key={artist.name}
               name={artist.name}
-              engName={artist.engName} // 👈 추가
+              engName={artist.engName as string} // 👈 추가
               imageUrl={artist.imageUrl}
               href={artist.href}
               filmography={artist.filmography} // 👈 추가
