@@ -64,7 +64,7 @@ const YoutubeNews = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
-    variableWidth: true, // 오타 수정: `variableWith` ❌ → `variableWidth` ✅
+    variableWidth: false,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
