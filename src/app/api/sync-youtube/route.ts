@@ -6,9 +6,10 @@ export async function GET() {
     const videos = await fetchLatestVideos();
     await saveVideosToSupabase(videos);
     return Response.json({ success: true, count: videos.length });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const err = error as Error;
     return Response.json(
-      { success: false, message: error.message },
+      { success: false, message: err.message },
       { status: 500 }
     );
   }
