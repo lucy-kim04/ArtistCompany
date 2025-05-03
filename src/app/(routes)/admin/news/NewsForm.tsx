@@ -44,7 +44,7 @@ export default function NewsForm() {
           summary: data.summary || '',
           thumbnail: data.thumbnail || '',
           created_at: data.created_at
-            ? data.created_at.slice(0, 16) // datetime-local input용 포맷
+            ? data.created_at.slice(0, 16)
             : new Date().toISOString().slice(0, 16),
         }));
       } else {
@@ -63,6 +63,8 @@ export default function NewsForm() {
       alert('필수 항목을 입력하세요.');
       return;
     }
+
+    setLoading(true);
 
     try {
       const res = await fetch('/api/admin', {
@@ -90,6 +92,8 @@ export default function NewsForm() {
     } catch (error) {
       console.error(error);
       alert('서버 에러 발생');
+    } finally {
+      setLoading(false);
     }
   };
 
