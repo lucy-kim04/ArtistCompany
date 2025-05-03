@@ -1,28 +1,22 @@
 import { NextResponse } from 'next/server';
-
-// YouTube 아이템 타입 정의
-type YoutubeItem = {
-  id: string;
-  title: string;
-  thumbnail: string;
-  publishedAt: string;
-};
-
-// 요청 바디 타입 정의
-type SyncYoutubeRequest = {
-  items: YoutubeItem[];
-};
+import metadata from 'url-metadata';
 
 export async function POST(req: Request) {
-  const body: SyncYoutubeRequest = await req.json();
-  const { items } = body;
+  const { url } = await req.json();
 
-  for (const item of items) {
-    console.log('📹', item.title, item.publishedAt);
-
-    // 예시: Supabase에 저장하거나 기타 처리
-    // await saveToSupabase(item);
+  try {
+    const meta = await metadata(url);
+    return NextResponse.json({
+      title: meta.title,
+      summary: meta.description,
+      thumbnail: meta.image,
+      created_at: meta['article:published_time'] || new Date().toISOString(),
+    });
+  } catch (err) {
+    console.error('메타데이터 파싱 에러:', err); // 사용됨!
+    return NextResponse.json(
+      { error: '❌ 메타데이터 파싱 실패' },
+      { status: 500 }
+    );
   }
-
-  return NextResponse.json({ success: true });
 }
