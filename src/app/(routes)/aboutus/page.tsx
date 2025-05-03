@@ -23,7 +23,7 @@ export default function WePage() {
 
       <section className="text-center space-y-2 text-[20px] text-gray-400 py-10">
         좋은 사람들과 즐겁게 일하기 위해 만난, 우린 같은 꿈을 꾸는
-        ‘아티스트컴퍼니'입니다.
+        &rsquo;아티스트컴퍼니$&rsquo;입니다.
       </section>
     </main>
   );
