@@ -13,6 +13,7 @@ export async function POST(req: Request) {
       created_at: meta['article:published_time'] || new Date().toISOString(),
     });
   } catch (err) {
+    console.error('메타데이터 파싱 에러:', err); // 사용됨!
     return NextResponse.json(
       { error: '❌ 메타데이터 파싱 실패' },
       { status: 500 }
