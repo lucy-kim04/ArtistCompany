@@ -12,7 +12,6 @@ if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
 const supabase = createClient(
   process.env.SUPABASE_URL!,
   process.env.SUPABASE_SERVICE_ROLE_KEY!,
-
   {
     auth: {
       autoRefreshToken: false,
@@ -42,14 +41,16 @@ export async function GET() {
 
     console.log('GET - Success, count:', data?.count);
     return NextResponse.json({ total: data?.count || 0 });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const err = error as Error;
     console.error('GET - Full error:', {
-      name: error.name,
-      message: error.message,
-      stack: error.stack,
+      name: err.name,
+      message: err.message,
+      stack: err.stack,
     });
+
     return NextResponse.json(
-      { error: error?.message || 'Failed to fetch visitor count' },
+      { error: err?.message || 'Failed to fetch visitor count' },
       { status: 500 }
     );
   }
@@ -101,14 +102,16 @@ export async function POST() {
 
     console.log('POST - Success, new count:', data?.count);
     return NextResponse.json({ success: true, total: data?.count || newCount });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const err = error as Error;
     console.error('POST - Full error:', {
-      name: error.name,
-      message: error.message,
-      stack: error.stack,
+      name: err.name,
+      message: err.message,
+      stack: err.stack,
     });
+
     return NextResponse.json(
-      { error: error?.message || 'Failed to update visitor count' },
+      { error: err?.message || 'Failed to update visitor count' },
       { status: 500 }
     );
   }
