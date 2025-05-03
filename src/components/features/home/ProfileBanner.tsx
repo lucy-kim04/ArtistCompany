@@ -188,8 +188,8 @@ export default function ProfileBanner() {
     pauseOnHover: false,
   };
   return (
-    <div className="w-full overflow-hidden">
-      <div className=" mx-auto lg:w-[1720px] h-[618px]">
+    <div className="w-full\ overflow-hidden">
+      <div className=" mx-auto lg:max-w-[1600px] h-[618px] ">
         <Slider {...settings}>
           {profiles.map((profile, index) => (
             <div
