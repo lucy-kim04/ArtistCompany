@@ -1,4 +1,5 @@
 import { fetchLatestVideos } from '@/utils/fetchLatestVideos';
+
 import { saveVideosToSupabase } from '@/utils/saveVideosToSupabase';
 
 export async function GET() {
