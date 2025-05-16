@@ -1,9 +1,9 @@
-<div align="center">
 
-# 🎬 Artist Company Re-design
+  # 🎬 Artist Company Re-design
 
 <img 
   src="https://raw.githubusercontent.com/lucy-kim04/ArtistCompany/develop/public/images/logo-crop.png"  />
+
 
 ## 🔧 Tech Stack
 
@@ -47,6 +47,8 @@
 **개발 기간**: 2025년 4월 11일 ~ 2025년 5월 22일
 
 **참여 인원**: 1명 (개인 프로젝트)
+
+### [바로 가기](https://artist-company.vercel.app/)
 
 ---
 
@@ -116,5 +118,3 @@ npm run dev
 ---
 
 
-
-</div>
